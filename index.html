@@ -1,32 +1,3 @@
-<?php 
-require 'functions.php'; //Memanggil file functions.php. bisa juga menggunakan inclued
-
-$samsunggalaxy = query("SELECT * FROM data_samsung");
-// ASC Cara mengurutkan terkecil sampai terbesar
-// DESC cara mengurutkan terbesar sampai terkecil
-
-// Tombol cari ditekan
-if (isset ($_POST["cari"]) ){
-	$samsunggalaxy = cari($_POST["keyword"]);
-}
-
-//Bila ingin menampikan dalam bentuk satuan menggunakan WHERE tgl_masuk = 'SS20-19-Q1'
-
-//query data data_samsung disimpan ke dalam variabel samsunggalaxy(berbentuk array)
-
-/*
-Ambil Data dari tabel data_samsung
-
-->(mysqli_query()) memiliki parameter dua. Yaitu connect ke Databasenya dan juga Tabel_Databasenya
-
--> Penggunaan query, akan mengembalikan dua hal.
-	Jika BERHASIL, maka query akan dilakukan, seperti menambah tatap menambah, menghapus tetap menghapus, dan mengembalikan nilai TRUE
-
-	Jika GAGAL, maka fungsi mysqli_query tidak akan berjalan querynya atau akan mengembalikan nilai FALSE
-*/
-
-
- ?>
 
 <!DOCTYPE html>
 <html>
